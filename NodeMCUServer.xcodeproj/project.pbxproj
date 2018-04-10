@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		107A37BF207B972C00492EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37BE207B972C00492EE6 /* AppDelegate.swift */; };
+		107A37C1207B972C00492EE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37C0207B972C00492EE6 /* ViewController.swift */; };
+		107A37C4207B972C00492EE6 /* NodeMCUServer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 107A37C2207B972C00492EE6 /* NodeMCUServer.xcdatamodeld */; };
+		107A37C6207B972E00492EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107A37C5207B972E00492EE6 /* Assets.xcassets */; };
+		107A37C9207B972E00492EE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107A37C7207B972E00492EE6 /* Main.storyboard */; };
+		107A37E5207B97C300492EE6 /* StreamServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37E4207B97C300492EE6 /* StreamServer.swift */; };
+		107A37E9207B99A700492EE6 /* NetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37E8207B99A700492EE6 /* NetConnection.swift */; };
+		107A37F3207BE1F300492EE6 /* StreamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37F0207BE1F200492EE6 /* StreamClient.swift */; };
+		107A37F4207BE1F300492EE6 /* ClientConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37F1207BE1F300492EE6 /* ClientConnection.swift */; };
+		107A37F5207BE1F300492EE6 /* ServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37F2207BE1F300492EE6 /* ServerConnection.swift */; };
+		107A37F9207BE29C00492EE6 /* iOSListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37F8207BE29C00492EE6 /* iOSListener.swift */; };
+		107A37FB207BE3F300492EE6 /* iOSServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37FA207BE3F300492EE6 /* iOSServer.swift */; };
+		107A37FD207BE78200492EE6 /* Acceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37FC207BE78200492EE6 /* Acceptor.swift */; };
+		107A37FF207BED8E00492EE6 /* ArduinoServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37FE207BED8E00492EE6 /* ArduinoServer.swift */; };
+		107A3801207BEDF300492EE6 /* iOSAcceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A3800207BEDF300492EE6 /* iOSAcceptor.swift */; };
+		107A3803207BEF7C00492EE6 /* ArduinoAcceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A3802207BEF7C00492EE6 /* ArduinoAcceptor.swift */; };
+		108A7192207C9E73009617F7 /* ArduinoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108A7191207C9E73009617F7 /* ArduinoClient.swift */; };
+		108A7194207C9ED4009617F7 /* DefaultObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108A7193207C9ED4009617F7 /* DefaultObjects.swift */; };
+		108A7196207CA34F009617F7 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108A7195207CA34F009617F7 /* Session.swift */; };
+		108A7198207CA885009617F7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108A7197207CA885009617F7 /* Logger.swift */; };
+		10C0F545207CC887008518D3 /* ArduinoListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0F544207CC887008518D3 /* ArduinoListener.swift */; };
+		10C0F54C207CDD94008518D3 /* iOSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0F54B207CDD94008518D3 /* iOSClient.swift */; };
+		410B2AB4DE485D74E8E12BF0 /* Pods_NodeMCUServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CB03CD527AF156A0DBF35 /* Pods_NodeMCUServer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		107A37BB207B972C00492EE6 /* NodeMCUServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NodeMCUServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		107A37BE207B972C00492EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		107A37C0207B972C00492EE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		107A37C3207B972C00492EE6 /* NodeMCUServer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NodeMCUServer.xcdatamodel; sourceTree = "<group>"; };
+		107A37C5207B972E00492EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		107A37C8207B972E00492EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		107A37CA207B972E00492EE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		107A37CB207B972E00492EE6 /* NodeMCUServer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NodeMCUServer.entitlements; sourceTree = "<group>"; };
+		107A37E4207B97C300492EE6 /* StreamServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamServer.swift; sourceTree = "<group>"; };
+		107A37E8207B99A700492EE6 /* NetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetConnection.swift; sourceTree = "<group>"; };
+		107A37F0207BE1F200492EE6 /* StreamClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamClient.swift; sourceTree = "<group>"; };
+		107A37F1207BE1F300492EE6 /* ClientConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientConnection.swift; sourceTree = "<group>"; };
+		107A37F2207BE1F300492EE6 /* ServerConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerConnection.swift; sourceTree = "<group>"; };
+		107A37F8207BE29C00492EE6 /* iOSListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSListener.swift; sourceTree = "<group>"; };
+		107A37FA207BE3F300492EE6 /* iOSServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSServer.swift; sourceTree = "<group>"; };
+		107A37FC207BE78200492EE6 /* Acceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acceptor.swift; sourceTree = "<group>"; };
+		107A37FE207BED8E00492EE6 /* ArduinoServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArduinoServer.swift; sourceTree = "<group>"; };
+		107A3800207BEDF300492EE6 /* iOSAcceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAcceptor.swift; sourceTree = "<group>"; };
+		107A3802207BEF7C00492EE6 /* ArduinoAcceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArduinoAcceptor.swift; sourceTree = "<group>"; };
+		108A7191207C9E73009617F7 /* ArduinoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArduinoClient.swift; sourceTree = "<group>"; };
+		108A7193207C9ED4009617F7 /* DefaultObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultObjects.swift; sourceTree = "<group>"; };
+		108A7195207CA34F009617F7 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		108A7197207CA885009617F7 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		10C0F544207CC887008518D3 /* ArduinoListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArduinoListener.swift; sourceTree = "<group>"; };
+		10C0F54B207CDD94008518D3 /* iOSClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSClient.swift; sourceTree = "<group>"; };
+		5A11E16CB2D4D23E7008D012 /* Pods-NodeMCUServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodeMCUServer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NodeMCUServer/Pods-NodeMCUServer.release.xcconfig"; sourceTree = "<group>"; };
+		6D3A0EA29A959C9791BEF225 /* Pods-NodeMCUServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodeMCUServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NodeMCUServer/Pods-NodeMCUServer.debug.xcconfig"; sourceTree = "<group>"; };
+		B45CB03CD527AF156A0DBF35 /* Pods_NodeMCUServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NodeMCUServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		107A37B8207B972C00492EE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410B2AB4DE485D74E8E12BF0 /* Pods_NodeMCUServer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		107A37B2207B972C00492EE6 = {
+			isa = PBXGroup;
+			children = (
+				10C0F54A207CCD20008518D3 /* UI */,
+				10C0F549207CCC78008518D3 /* Application */,
+				107A37E3207B978B00492EE6 /* Network */,
+				107A37BD207B972C00492EE6 /* NodeMCUServer */,
+				107A37BC207B972C00492EE6 /* Products */,
+				7D09EF1FC1968BFD452CFAE0 /* Pods */,
+				A980DA017F007276FDCF94C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		107A37BC207B972C00492EE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				107A37BB207B972C00492EE6 /* NodeMCUServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		107A37BD207B972C00492EE6 /* NodeMCUServer */ = {
+			isa = PBXGroup;
+			children = (
+				107A37BE207B972C00492EE6 /* AppDelegate.swift */,
+				107A37C5207B972E00492EE6 /* Assets.xcassets */,
+				107A37CA207B972E00492EE6 /* Info.plist */,
+				107A37CB207B972E00492EE6 /* NodeMCUServer.entitlements */,
+				107A37C2207B972C00492EE6 /* NodeMCUServer.xcdatamodeld */,
+			);
+			path = NodeMCUServer;
+			sourceTree = "<group>";
+		};
+		107A37E3207B978B00492EE6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				107A3804207BEF8100492EE6 /* Acceptor */,
+				10C0F548207CCC44008518D3 /* Library */,
+				10C0F547207CCC29008518D3 /* Arduino */,
+				10C0F546207CCC1B008518D3 /* iOS */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		107A3804207BEF8100492EE6 /* Acceptor */ = {
+			isa = PBXGroup;
+			children = (
+				107A37FC207BE78200492EE6 /* Acceptor.swift */,
+				107A3800207BEDF300492EE6 /* iOSAcceptor.swift */,
+				107A3802207BEF7C00492EE6 /* ArduinoAcceptor.swift */,
+			);
+			path = Acceptor;
+			sourceTree = "<group>";
+		};
+		10C0F546207CCC1B008518D3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				107A37FA207BE3F300492EE6 /* iOSServer.swift */,
+				107A37F8207BE29C00492EE6 /* iOSListener.swift */,
+				10C0F54B207CDD94008518D3 /* iOSClient.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		10C0F547207CCC29008518D3 /* Arduino */ = {
+			isa = PBXGroup;
+			children = (
+				107A37FE207BED8E00492EE6 /* ArduinoServer.swift */,
+				10C0F544207CC887008518D3 /* ArduinoListener.swift */,
+				108A7191207C9E73009617F7 /* ArduinoClient.swift */,
+			);
+			path = Arduino;
+			sourceTree = "<group>";
+		};
+		10C0F548207CCC44008518D3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				107A37F1207BE1F300492EE6 /* ClientConnection.swift */,
+				107A37F2207BE1F300492EE6 /* ServerConnection.swift */,
+				107A37F0207BE1F200492EE6 /* StreamClient.swift */,
+				107A37E8207B99A700492EE6 /* NetConnection.swift */,
+				107A37E4207B97C300492EE6 /* StreamServer.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		10C0F549207CCC78008518D3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				108A7193207C9ED4009617F7 /* DefaultObjects.swift */,
+				108A7197207CA885009617F7 /* Logger.swift */,
+				108A7195207CA34F009617F7 /* Session.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		10C0F54A207CCD20008518D3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				107A37C0207B972C00492EE6 /* ViewController.swift */,
+				107A37C7207B972E00492EE6 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7D09EF1FC1968BFD452CFAE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D3A0EA29A959C9791BEF225 /* Pods-NodeMCUServer.debug.xcconfig */,
+				5A11E16CB2D4D23E7008D012 /* Pods-NodeMCUServer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A980DA017F007276FDCF94C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B45CB03CD527AF156A0DBF35 /* Pods_NodeMCUServer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		107A37BA207B972C00492EE6 /* NodeMCUServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107A37CE207B972E00492EE6 /* Build configuration list for PBXNativeTarget "NodeMCUServer" */;
+			buildPhases = (
+				19041D60D089855F2AA60D9F /* [CP] Check Pods Manifest.lock */,
+				107A37B7207B972C00492EE6 /* Sources */,
+				107A37B8207B972C00492EE6 /* Frameworks */,
+				107A37B9207B972C00492EE6 /* Resources */,
+				3914B104D15C9880613F7FDE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NodeMCUServer;
+			productName = NodeMCUServer;
+			productReference = 107A37BB207B972C00492EE6 /* NodeMCUServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		107A37B3207B972C00492EE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Matthias Hofmann";
+				TargetAttributes = {
+					107A37BA207B972C00492EE6 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 107A37B6207B972C00492EE6 /* Build configuration list for PBXProject "NodeMCUServer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 107A37B2207B972C00492EE6;
+			productRefGroup = 107A37BC207B972C00492EE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				107A37BA207B972C00492EE6 /* NodeMCUServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		107A37B9207B972C00492EE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107A37C6207B972E00492EE6 /* Assets.xcassets in Resources */,
+				107A37C9207B972E00492EE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19041D60D089855F2AA60D9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NodeMCUServer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3914B104D15C9880613F7FDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NodeMCUServer/Pods-NodeMCUServer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NodeMCUServer/Pods-NodeMCUServer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		107A37B7207B972C00492EE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107A37FD207BE78200492EE6 /* Acceptor.swift in Sources */,
+				107A37F4207BE1F300492EE6 /* ClientConnection.swift in Sources */,
+				107A3803207BEF7C00492EE6 /* ArduinoAcceptor.swift in Sources */,
+				107A37F3207BE1F300492EE6 /* StreamClient.swift in Sources */,
+				107A37C1207B972C00492EE6 /* ViewController.swift in Sources */,
+				108A7198207CA885009617F7 /* Logger.swift in Sources */,
+				108A7196207CA34F009617F7 /* Session.swift in Sources */,
+				107A37F5207BE1F300492EE6 /* ServerConnection.swift in Sources */,
+				107A37C4207B972C00492EE6 /* NodeMCUServer.xcdatamodeld in Sources */,
+				107A37E9207B99A700492EE6 /* NetConnection.swift in Sources */,
+				107A37BF207B972C00492EE6 /* AppDelegate.swift in Sources */,
+				108A7194207C9ED4009617F7 /* DefaultObjects.swift in Sources */,
+				10C0F54C207CDD94008518D3 /* iOSClient.swift in Sources */,
+				107A37E5207B97C300492EE6 /* StreamServer.swift in Sources */,
+				107A37FF207BED8E00492EE6 /* ArduinoServer.swift in Sources */,
+				10C0F545207CC887008518D3 /* ArduinoListener.swift in Sources */,
+				107A37FB207BE3F300492EE6 /* iOSServer.swift in Sources */,
+				107A37F9207BE29C00492EE6 /* iOSListener.swift in Sources */,
+				108A7192207C9E73009617F7 /* ArduinoClient.swift in Sources */,
+				107A3801207BEDF300492EE6 /* iOSAcceptor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		107A37C7207B972E00492EE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				107A37C8207B972E00492EE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		107A37CC207B972E00492EE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		107A37CD207B972E00492EE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		107A37CF207B972E00492EE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D3A0EA29A959C9791BEF225 /* Pods-NodeMCUServer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = W3CQ3BU7AJ;
+				INFOPLIST_FILE = NodeMCUServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthiasHofmann.NodeMCUServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		107A37D0207B972E00492EE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A11E16CB2D4D23E7008D012 /* Pods-NodeMCUServer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = W3CQ3BU7AJ;
+				INFOPLIST_FILE = NodeMCUServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthiasHofmann.NodeMCUServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		107A37B6207B972C00492EE6 /* Build configuration list for PBXProject "NodeMCUServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107A37CC207B972E00492EE6 /* Debug */,
+				107A37CD207B972E00492EE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		107A37CE207B972E00492EE6 /* Build configuration list for PBXNativeTarget "NodeMCUServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107A37CF207B972E00492EE6 /* Debug */,
+				107A37D0207B972E00492EE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		107A37C2207B972C00492EE6 /* NodeMCUServer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				107A37C3207B972C00492EE6 /* NodeMCUServer.xcdatamodel */,
+			);
+			currentVersion = 107A37C3207B972C00492EE6 /* NodeMCUServer.xcdatamodel */;
+			path = NodeMCUServer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 107A37B3207B972C00492EE6 /* Project object */;
+}
