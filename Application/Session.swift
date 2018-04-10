@@ -73,6 +73,22 @@ class Session: NSObject {
                     
                     try client.run()
                 })
+                
+                do {
+                
+                    try self.arduino.run()
+                
+                } catch {
+                    
+                }
+                
+                do {
+                    
+                    try self.user.run()
+                    
+                } catch {
+                    
+                }
             }
         }
     }

@@ -59,6 +59,7 @@ class ViewController: NSViewController {
             try Session.shared.user.sendCommand( self.commandField.stringValue )
         
             Session.shared.logger.addLine( "Command sent successfully: " + self.commandField.stringValue )
+            
         } catch {
          
              Session.shared.logger.addError( error )
