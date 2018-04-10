@@ -54,21 +54,17 @@ class ViewController: NSViewController {
     
     @IBAction func runCommand( sender: Any) {
         
-        Session.shared.iOS.run { (client) in
-            
-            do {
-                
-                try client.sendCommand( self.commandField.stringValue )
-                
-                Session.shared.logger.addLine( "Command sent successfully: " + self.commandField.stringValue )
-               
-            } catch {
-               
-                Session.shared.logger.addError( error )
-            }
-            
-            self.commandField.stringValue = ""
+        do {
+        
+            try Session.shared.user.sendCommand( self.commandField.stringValue )
+        
+            Session.shared.logger.addLine( "Command sent successfully: " + self.commandField.stringValue )
+        } catch {
+         
+             Session.shared.logger.addError( error )
         }
+        
+        self.commandField.stringValue = ""
     }
 }
 

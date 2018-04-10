@@ -39,11 +39,11 @@ class iOSListener: StreamClient {
             
                 try MCU.net().writeString( cmd );
                 
-                Session.shared.logger.addLine( "Command sent successfully." )
+                Session.shared.logger.addLine( "Command passed successfully." )
             
             } catch {
 
-                Session.shared.logger.addLine( "Sending command failed." )
+                Session.shared.logger.addLine( "Sending passed failed." )
                 Session.shared.logger.addError( error )
                 
                 try self.net().writeString( DefaultObjects.STATUS_ERROR )
