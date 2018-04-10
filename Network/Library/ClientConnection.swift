@@ -38,7 +38,7 @@ class ClientConnection: NetConnection {
     ///////////////////////
     func writeString( _ value: String! ) throws {
         
-        try writeByte( UInt8(value.count ))
+        try writeInt( Int16(value.count ))
         try handleResult( socket.send( data: value.data(using: .ascii )! ) );
     }
     
@@ -56,9 +56,9 @@ class ClientConnection: NetConnection {
     ////////////////////////////////////////
     // Write to remote server
     //////////////////////////
-    private func writeByte( _ value: Byte! ) throws {
+    private func writeInt( _ value: Int16! ) throws {
         
-        var worker: Byte! = value;
+        var worker: Int16! = value;
         try handleResult( socket.send( data: Data( bytes: &worker,
                                                    count: MemoryLayout.size(ofValue: worker)) ))
     }
@@ -72,11 +72,11 @@ class ClientConnection: NetConnection {
     ////////////////////////////////////////
     // Read from remote server
     /////////////////////
-    private func readByte() -> Byte! {
+    private func readInt() -> Int16! {
         
-        var result: Byte! = 0
+        var result: Int16! = 0
         let length: Int! = MemoryLayout.size( ofValue: result )
-        let array: [Byte]! = readBlock( UInt8(length) )
+        let array: [Byte]! = readBlock( Int16(length) )
         
         if array == nil || array.count == 0 {
             
@@ -95,7 +95,7 @@ class ClientConnection: NetConnection {
         
         var result: Float! = 0
         let length: Int! = MemoryLayout.size( ofValue: result )
-        let array: [Byte]! = readBlock( UInt8(length) )
+        let array: [Byte]! = readBlock( Int16(length) )
         
         if array == nil || array.count == 0 {
             
@@ -110,7 +110,7 @@ class ClientConnection: NetConnection {
         }
     }
     
-    private func readBlock( _ length: UInt8! ) -> [Byte]! {
+    private func readBlock( _ length: Int16! ) -> [Byte]! {
         
         if length == 0 {
             
@@ -124,7 +124,7 @@ class ClientConnection: NetConnection {
     
     private func readPaket( ) -> [Byte]! {
         
-        let length = readByte()
+        let length = readInt()
         if length == 0 {
             
             return [Byte]()
