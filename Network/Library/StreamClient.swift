@@ -23,10 +23,18 @@ class StreamClient: NSObject {
     }
     
     func run() throws {
+     
+        if let cmd = try nextCommand() {
+            
+            try handleCommand( cmd )
+        }
+    }
+    
+    func handleCommand( _ cmd: String! ) throws {
         
     }
     
-    func nextCommand() throws -> String? {
+    private func nextCommand() throws -> String? {
         
         let result = try connection.readString()
         if result == nil || result == "" {

@@ -18,8 +18,8 @@ class DefaultObjects: NSObject {
     static let STATUS_SUCCESS: String! = "Success"
     static let STATUS_ERROR: String! = "Error"
     
-    static let ARDUINO_PORT_IN: Int32! = 8088
-    static let IOS_PORT_IN: Int32! = 8080
+    static let ARDUINO_PORT_IN: Int32! = 9088
+    static let IOS_PORT_IN: Int32! = 9089
 
     static let MY_IP: String! = Host.current().address
 }

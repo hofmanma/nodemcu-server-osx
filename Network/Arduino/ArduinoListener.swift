@@ -10,8 +10,8 @@ import Cocoa
 
 class ArduinoListener: StreamClient {
     
-    func ping() throws {
+    override func handleCommand( _ cmd: String! ) {
         
-       try net().writeString( DefaultObjects.CMD_WHOAMI )
+        Session.shared.logger.addLine( "New Command from Arduino Client: " + cmd )
     }
 }

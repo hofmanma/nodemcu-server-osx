@@ -28,22 +28,18 @@ class Session: NSObject {
             logger.addLine( "IP: " + DefaultObjects.MY_IP )
             
             try iOS = iOSAcceptor( 0 )
-            
             logger.addLine( "iOS Acceptor started.")
             
             try MCU = ArduinoAcceptor( 0 )
-        
             logger.addLine( "Arduino Acceptor started.")
             logger.addDashLine()
             
             arduino = try ArduinoClient( ClientConnection( DefaultObjects.ARDUINO_PORT_IN,
                                                            DefaultObjects.MY_IP ));
-            
             logger.addLine( "Arduino Test client started.")
             
             user = try iOSClient( ClientConnection( DefaultObjects.IOS_PORT_IN,
                                                     DefaultObjects.MY_IP ));
-            
             logger.addLine( "iOS Test client started.")
             logger.addDashLine()
             
@@ -90,31 +86,18 @@ class Session: NSObject {
                     
                 }
             }
+            
+            self.iOS.stop()
+            self.MCU.stop()
+            self.arduino.net().close()
+            self.user.net().close()
+            
+            self.logger.addLine( "Network shut down.")
         }
     }
     
     func shutDown() {
         
         running = false
-        
-        if iOS != nil {
-            
-            iOS.stop()
-            iOS = nil
-        }
-        
-        if MCU != nil {
-            
-            MCU.stop()
-            MCU = nil
-        }
-        
-        if arduino != nil {
-            
-            arduino.net().close()
-            arduino = nil
-        }
-        
-        logger.addLine( "Network shut down.")
     }
 }

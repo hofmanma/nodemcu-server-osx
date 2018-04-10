@@ -10,24 +10,21 @@ import Cocoa
 
 class iOSListener: StreamClient {
 
-    override func run() throws {
+    override func handleCommand (  _ cmd: String! ) throws {
         
-        if let cmd = try nextCommand() {
+        Session.shared.logger.addLine( "New Command from iOS Client: " + cmd )
         
-            Session.shared.logger.addLine( "New Command from iOS Client: " + cmd )
-        
-            if cmd == DefaultObjects.CMD_LED_ON {
+        if cmd == DefaultObjects.CMD_LED_ON {
             
-                try passToMCU( cmd )
+            try passToMCU( cmd )
             
-            } else if cmd == DefaultObjects.CMD_LED_OFF {
+        } else if cmd == DefaultObjects.CMD_LED_OFF {
             
-                try passToMCU( cmd )
+            try passToMCU( cmd )
         
-            } else {
+        } else {
          
-                Session.shared.logger.addLine( "Unknown Command in iOS Client." )
-            }
+            Session.shared.logger.addLine( "Unknown Command in iOS Client." )
         }
     }
     

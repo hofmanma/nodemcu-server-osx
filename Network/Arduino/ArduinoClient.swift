@@ -10,12 +10,9 @@ import Cocoa
 
 class ArduinoClient: StreamClient {
 
-    override func run() throws {
+    override func handleCommand( _ cmd: String! ) {
         
-        if let cmd = try nextCommand() {
-        
-            Session.shared.logger.addLine( "New Command from Arduino Client: " + cmd )
-        }
+        Session.shared.logger.addLine( "New Command from Arduino Listener: " + cmd )
     }
     
     func switchLEDOn() throws {
