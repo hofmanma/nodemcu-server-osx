@@ -48,7 +48,7 @@ class StreamClient: NSObject {
     }
     
     func sendCommand( _ cmd: String! ) throws {
-        
+    
         try connection.writeString( cmd )
     }
 }

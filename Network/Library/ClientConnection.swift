@@ -38,8 +38,8 @@ class ClientConnection: NetConnection {
     ///////////////////////
     func writeString( _ value: String! ) throws {
         
-        try writeInt( Int16(value.count ))
-        try handleResult( socket.send( data: value.data(using: .ascii )! ) );
+        try writeInt( value.count )
+        try handleResult( socket.send( string: value ));
     }
     
     func readString() throws -> String! {
@@ -56,27 +56,28 @@ class ClientConnection: NetConnection {
     ////////////////////////////////////////
     // Write to remote server
     //////////////////////////
-    private func writeInt( _ value: Int16! ) throws {
+    private func writeInt( _ value: Int! ) throws {
         
-        var worker: Int16! = value;
+        var worker: Int32! = Int32(value)        
         try handleResult( socket.send( data: Data( bytes: &worker,
-                                                   count: MemoryLayout.size(ofValue: worker)) ))
+                                                   count: MemoryLayout<Int32>.size)))
     }
     
-    private func writeFloat( _ value: Float! ) throws {
+    private func writeFloat( _ value: Float32! ) throws {
         
-        var worker: Float! = value;
+        var worker: Float32! = value;
         try handleResult( socket.send( data: Data( bytes: &worker,
-                                                   count: MemoryLayout.size(ofValue: worker))) )
+                                                   count: MemoryLayout<Float32>.size)) )
     }
     ////////////////////////////////////////
     // Read from remote server
     /////////////////////
-    private func readInt() -> Int16! {
+    private func readInt() -> Int! {
         
-        var result: Int16! = 0
-        let length: Int! = MemoryLayout.size( ofValue: result )
-        let array: [Byte]! = readBlock( Int16(length) )
+        var result: Int32! = 0
+        let length: Int! = MemoryLayout<Int32>.size
+        
+        let array: [Byte]! = readBlock( length )
         
         if array == nil || array.count == 0 {
             
@@ -87,15 +88,15 @@ class ClientConnection: NetConnection {
             let data = NSData(bytes: array, length: length)
                 data.getBytes(&result, length: length)
         
-            return result
+            return Int(result)
         }
     }
     
-    private func readFloat() -> Float {
+    private func readFloat() -> Float32! {
         
-        var result: Float! = 0
-        let length: Int! = MemoryLayout.size( ofValue: result )
-        let array: [Byte]! = readBlock( Int16(length) )
+        var result: Float32! = 0
+        let length: Int! = MemoryLayout.size( ofValue: result ) - 1
+        let array: [Byte]! = readBlock( length )
         
         if array == nil || array.count == 0 {
             
@@ -110,7 +111,7 @@ class ClientConnection: NetConnection {
         }
     }
     
-    private func readBlock( _ length: Int16! ) -> [Byte]! {
+    private func readBlock( _ length: Int! ) -> [Byte]! {
         
         if length == 0 {
             
@@ -118,7 +119,7 @@ class ClientConnection: NetConnection {
         
         } else {
         
-            return socket.read( Int(length), timeout: 1 )
+            return socket.read( length, timeout: 1 )
         }
     }
     

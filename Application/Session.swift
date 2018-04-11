@@ -23,7 +23,7 @@ class Session: NSObject {
         super.init()
         
         do {
-        
+            
             logger.addLine( "Setting up Network ..")
             logger.addLine( "IP: " + DefaultObjects.MY_IP )
             
@@ -34,10 +34,10 @@ class Session: NSObject {
             logger.addLine( "Arduino Acceptor started.")
             logger.addDashLine()
             
-            arduino = try ArduinoClient( ClientConnection( DefaultObjects.ARDUINO_PORT_IN,
+            /*arduino = try ArduinoClient( ClientConnection( DefaultObjects.ARDUINO_PORT_IN,
                                                            DefaultObjects.MY_IP ));
             logger.addLine( "Arduino Test client started.")
-            
+            */
             user = try iOSClient( ClientConnection( DefaultObjects.IOS_PORT_IN,
                                                     DefaultObjects.MY_IP ));
             logger.addLine( "iOS Test client started.")
@@ -72,7 +72,7 @@ class Session: NSObject {
                 
                 do {
                 
-                    try self.arduino.run()
+                    // try self.arduino.run()
                 
                 } catch {
                     
@@ -89,7 +89,7 @@ class Session: NSObject {
             
             self.iOS.stop()
             self.MCU.stop()
-            self.arduino.net().close()
+            //self.arduino.net().close()
             self.user.net().close()
             
             self.logger.addLine( "Network shut down.")
