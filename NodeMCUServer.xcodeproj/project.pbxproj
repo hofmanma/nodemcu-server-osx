@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10639127207FEDAB00CB8F88 /* NodeMCU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10639126207FEDAB00CB8F88 /* NodeMCU.swift */; };
+		10639129207FEDBA00CB8F88 /* Port.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10639128207FEDBA00CB8F88 /* Port.swift */; };
 		107A37BF207B972C00492EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37BE207B972C00492EE6 /* AppDelegate.swift */; };
 		107A37C1207B972C00492EE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37C0207B972C00492EE6 /* ViewController.swift */; };
 		107A37C4207B972C00492EE6 /* NodeMCUServer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 107A37C2207B972C00492EE6 /* NodeMCUServer.xcdatamodeld */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10639126207FEDAB00CB8F88 /* NodeMCU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeMCU.swift; sourceTree = "<group>"; };
+		10639128207FEDBA00CB8F88 /* Port.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Port.swift; sourceTree = "<group>"; };
 		107A37BB207B972C00492EE6 /* NodeMCUServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NodeMCUServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107A37BE207B972C00492EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107A37C0207B972C00492EE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,9 +79,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10639125207FED8900CB8F88 /* Hardware */ = {
+			isa = PBXGroup;
+			children = (
+				10639126207FEDAB00CB8F88 /* NodeMCU.swift */,
+				10639128207FEDBA00CB8F88 /* Port.swift */,
+			);
+			path = Hardware;
+			sourceTree = "<group>";
+		};
 		107A37B2207B972C00492EE6 = {
 			isa = PBXGroup;
 			children = (
+				10639125207FED8900CB8F88 /* Hardware */,
 				10C0F54A207CCD20008518D3 /* UI */,
 				10C0F549207CCC78008518D3 /* Application */,
 				107A37E3207B978B00492EE6 /* Network */,
@@ -322,6 +336,7 @@
 				108A7198207CA885009617F7 /* Logger.swift in Sources */,
 				108A7196207CA34F009617F7 /* Session.swift in Sources */,
 				107A37F5207BE1F300492EE6 /* ServerConnection.swift in Sources */,
+				10639129207FEDBA00CB8F88 /* Port.swift in Sources */,
 				107A37C4207B972C00492EE6 /* NodeMCUServer.xcdatamodeld in Sources */,
 				107A37E9207B99A700492EE6 /* NetConnection.swift in Sources */,
 				107A37BF207B972C00492EE6 /* AppDelegate.swift in Sources */,
@@ -329,6 +344,7 @@
 				10C0F54C207CDD94008518D3 /* iOSClient.swift in Sources */,
 				107A37E5207B97C300492EE6 /* StreamServer.swift in Sources */,
 				107A37FF207BED8E00492EE6 /* ArduinoServer.swift in Sources */,
+				10639127207FEDAB00CB8F88 /* NodeMCU.swift in Sources */,
 				10C0F545207CC887008518D3 /* ArduinoListener.swift in Sources */,
 				107A37FB207BE3F300492EE6 /* iOSServer.swift in Sources */,
 				107A37F9207BE29C00492EE6 /* iOSListener.swift in Sources */,

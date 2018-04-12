@@ -15,6 +15,10 @@ class DefaultObjects: NSObject {
     static let CMD_EXIT: String! = "EXIT"
     static let CMD_READ_TEMPERATURE: String! = "TEMP"
     static let CMD_READ_HUMIDITY: String! = "HUMI"
+    static let CMD_READ_DIGPORTS: String! = "DIGPORTS"
+    static let CMD_READ_ANALOGPORTS: String! = "ALGPORTS"
+    static let CMD_DIGITALPORT_SENT: String! = "DGTLPRT"
+    static let CMD_ANALOGPORT_SENT: String! = "ANLGPRT"
     
     static let STATUS_SUCCESS: String! = "Success"
     static let STATUS_ERROR: String! = "Error"

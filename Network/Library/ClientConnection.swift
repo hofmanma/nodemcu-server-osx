@@ -72,7 +72,7 @@ class ClientConnection: NetConnection {
     ////////////////////////////////////////
     // Read from remote server
     /////////////////////
-    private func readInt() -> Int! {
+    func readInt() -> Int! {
         
         var result: Int32! = 0
         let length: Int! = MemoryLayout<Int32>.size
@@ -92,7 +92,7 @@ class ClientConnection: NetConnection {
         }
     }
     
-    private func readFloat() -> Float32! {
+    func readFloat() -> Float32! {
         
         var result: Float32! = 0
         let length: Int! = MemoryLayout.size( ofValue: result ) - 1
