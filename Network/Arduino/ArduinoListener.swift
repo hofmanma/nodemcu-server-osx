@@ -10,7 +10,7 @@ import Cocoa
 
 class ArduinoListener: StreamClient {
     
-    override func handleCommand( _ cmd: String! ) {
+    override func handleCommand( _ cmd: String! ) throws {
         
         Session.shared.logger.addLine( "New Command from Arduino Client: " + cmd )
     
