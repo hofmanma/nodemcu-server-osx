@@ -42,6 +42,10 @@ class iOSListener: StreamClient {
             
             try passToMCU( cmd )
             
+        } else if cmd == DefaultObjects.CMD_READ_PORTS {
+            
+            try passToMCU( cmd )
+            
         } else {
          
             try self.net().writeString( DefaultObjects.STATUS_ERROR )
