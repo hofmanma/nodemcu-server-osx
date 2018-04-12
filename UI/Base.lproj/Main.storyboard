@@ -780,7 +780,7 @@
         <!--NodeMCU View Controller-->
         <scene sceneID="e3o-Ib-CS4">
             <objects>
-                <viewController id="if8-P5-a3X" customClass="NodeMCUViewController" customModule="NodeMCUServer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController identifier="nodeMCU" storyboardIdentifier="nodeMCU" id="if8-P5-a3X" customClass="NodeMCUViewController" customModule="NodeMCUServer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="w7T-Hv-jIn">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1134,7 +1134,7 @@
                 </viewController>
                 <customObject id="aTN-31-aZ2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="670"/>
+            <point key="canvasLocation" x="617" y="670"/>
         </scene>
     </scenes>
 </document>
