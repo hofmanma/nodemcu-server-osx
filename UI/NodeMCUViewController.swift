@@ -55,6 +55,7 @@ class NodeMCUViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateControls()
         startTimer()
     }
     
@@ -67,7 +68,7 @@ class NodeMCUViewController: NSViewController {
         
         guard (self.timer != nil ) else {
             
-            self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(2),
+            self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
                                               target: self,
                                               selector: (#selector(nextLoop)),
                                               userInfo: nil,
@@ -92,24 +93,24 @@ class NodeMCUViewController: NSViewController {
     
     private func updateControls() {
         
-        lblD0.stringValue = "\(NodeMCU.IC.digitalPort( 0 ).signal()!))"
-        lblD1.stringValue = "\(NodeMCU.IC.digitalPort( 1 ).signal()!))"
-        lblD2.stringValue = "\(NodeMCU.IC.digitalPort( 2 ).signal()!))"
-        lblD3.stringValue = "\(NodeMCU.IC.digitalPort( 3 ).signal()!))"
-        lblD4.stringValue = "\(NodeMCU.IC.digitalPort( 4 ).signal()!))"
-        lblD5.stringValue = "\(NodeMCU.IC.digitalPort( 5 ).signal()!))"
-        lblD6.stringValue = "\(NodeMCU.IC.digitalPort( 6 ).signal()!))"
-        lblD7.stringValue = "\(NodeMCU.IC.digitalPort( 7 ).signal()!))"
-        lblD8.stringValue = "\(NodeMCU.IC.digitalPort( 8 ).signal()!))"
+        lblD0.stringValue = "\(NodeMCU.IC.digitalPort( 0 ).signal()!)"
+        lblD1.stringValue = "\(NodeMCU.IC.digitalPort( 1 ).signal()!)"
+        lblD2.stringValue = "\(NodeMCU.IC.digitalPort( 2 ).signal()!)"
+        lblD3.stringValue = "\(NodeMCU.IC.digitalPort( 3 ).signal()!)"
+        lblD4.stringValue = "\(NodeMCU.IC.digitalPort( 4 ).signal()!)"
+        lblD5.stringValue = "\(NodeMCU.IC.digitalPort( 5 ).signal()!)"
+        lblD6.stringValue = "\(NodeMCU.IC.digitalPort( 6 ).signal()!)"
+        lblD7.stringValue = "\(NodeMCU.IC.digitalPort( 7 ).signal()!)"
+        lblD8.stringValue = "\(NodeMCU.IC.digitalPort( 8 ).signal()!)"
         
-        lblA0.stringValue = "\(NodeMCU.IC.analogPort( 0 ).signal()!))"
-        lblA1.stringValue = "\(NodeMCU.IC.analogPort( 1 ).signal()!))"
-        lblA2.stringValue = "\(NodeMCU.IC.analogPort( 2 ).signal()!))"
-        lblA3.stringValue = "\(NodeMCU.IC.analogPort( 3 ).signal()!))"
-        lblA4.stringValue = "\(NodeMCU.IC.analogPort( 4 ).signal()!))"
-        lblA5.stringValue = "\(NodeMCU.IC.analogPort( 5 ).signal()!))"
-        lblA6.stringValue = "\(NodeMCU.IC.analogPort( 6 ).signal()!))"
-        lblA7.stringValue = "\(NodeMCU.IC.analogPort( 7 ).signal()!))"
-        lblA8.stringValue = "\(NodeMCU.IC.analogPort( 8 ).signal()!))"
+        lblA0.stringValue = "\(NodeMCU.IC.analogPort( 0 ).signal()!)"
+        lblA1.stringValue = "\(NodeMCU.IC.analogPort( 1 ).signal()!)"
+        lblA2.stringValue = "\(NodeMCU.IC.analogPort( 2 ).signal()!)"
+        lblA3.stringValue = "\(NodeMCU.IC.analogPort( 3 ).signal()!)"
+        lblA4.stringValue = "\(NodeMCU.IC.analogPort( 4 ).signal()!)"
+        lblA5.stringValue = "\(NodeMCU.IC.analogPort( 5 ).signal()!)"
+        lblA6.stringValue = "\(NodeMCU.IC.analogPort( 6 ).signal()!)"
+        lblA7.stringValue = "\(NodeMCU.IC.analogPort( 7 ).signal()!)"
+        lblA8.stringValue = "\(NodeMCU.IC.analogPort( 8 ).signal()!)"
     }
 }
