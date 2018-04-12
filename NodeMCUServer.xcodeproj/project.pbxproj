@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10639127207FEDAB00CB8F88 /* NodeMCU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10639126207FEDAB00CB8F88 /* NodeMCU.swift */; };
 		10639129207FEDBA00CB8F88 /* Port.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10639128207FEDBA00CB8F88 /* Port.swift */; };
+		1063912B207FF80700CB8F88 /* NodeMCUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063912A207FF80700CB8F88 /* NodeMCUViewController.swift */; };
 		107A37BF207B972C00492EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37BE207B972C00492EE6 /* AppDelegate.swift */; };
 		107A37C1207B972C00492EE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A37C0207B972C00492EE6 /* ViewController.swift */; };
 		107A37C4207B972C00492EE6 /* NodeMCUServer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 107A37C2207B972C00492EE6 /* NodeMCUServer.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		10639126207FEDAB00CB8F88 /* NodeMCU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeMCU.swift; sourceTree = "<group>"; };
 		10639128207FEDBA00CB8F88 /* Port.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Port.swift; sourceTree = "<group>"; };
+		1063912A207FF80700CB8F88 /* NodeMCUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeMCUViewController.swift; sourceTree = "<group>"; };
 		107A37BB207B972C00492EE6 /* NodeMCUServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NodeMCUServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107A37BE207B972C00492EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107A37C0207B972C00492EE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				107A37C0207B972C00492EE6 /* ViewController.swift */,
 				107A37C7207B972E00492EE6 /* Main.storyboard */,
+				1063912A207FF80700CB8F88 /* NodeMCUViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				10639127207FEDAB00CB8F88 /* NodeMCU.swift in Sources */,
 				10C0F545207CC887008518D3 /* ArduinoListener.swift in Sources */,
 				107A37FB207BE3F300492EE6 /* iOSServer.swift in Sources */,
+				1063912B207FF80700CB8F88 /* NodeMCUViewController.swift in Sources */,
 				107A37F9207BE29C00492EE6 /* iOSListener.swift in Sources */,
 				108A7192207C9E73009617F7 /* ArduinoClient.swift in Sources */,
 				107A3801207BEDF300492EE6 /* iOSAcceptor.swift in Sources */,
