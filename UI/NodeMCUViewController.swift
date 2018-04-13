@@ -51,14 +51,12 @@ class NodeMCUViewController: NSViewController {
     @IBOutlet weak var lblA8: NSTextField!
     
     var timer: Timer!
-    var running: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateControls()
         startTimer()
-        running = true
     }
     
     override var representedObject: Any? {
@@ -86,10 +84,6 @@ class NodeMCUViewController: NSViewController {
             self.timer.invalidate();
             self.timer = nil;
         }
-    }
-    
-    private func pollPorts() {
-        
     }
     
     @objc func nextLoop() {
