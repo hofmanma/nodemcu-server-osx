@@ -11,8 +11,6 @@ import Cocoa
 class iOSClient: StreamClient {
 
     override func handleCommand( _ cmd: String! ) throws {
-        
-        Session.shared.logger.addLine( "New Command from iOS Client: " + cmd )
 
         try super.handleCommand( cmd )
     }

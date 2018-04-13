@@ -12,7 +12,6 @@ class ArduinoListener: StreamClient {
     
     override func handleCommand( _ cmd: String! ) throws {
         
-        Session.shared.logger.addLine( "New Command from Arduino Client: " + cmd )
         if cmd == DefaultObjects.CMD_PORTS {
             
             for port in 0...8 {
@@ -24,8 +23,6 @@ class ArduinoListener: StreamClient {
                 
                 NodeMCU.IC.analogPort( port ).setSignal( Float(connection.readInt()) )
             }
-            
-            Session.shared.logger.addLine( "Ports successfully read." )
             
         } else if cmd == DefaultObjects.CMD_DIGITALPORT_SENT {
             

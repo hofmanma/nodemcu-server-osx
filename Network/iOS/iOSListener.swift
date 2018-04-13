@@ -12,8 +12,6 @@ class iOSListener: StreamClient {
 
     override func handleCommand (  _ cmd: String! ) throws {
         
-        Session.shared.logger.addLine( "New Command from iOS Client: " + cmd )
-        
         if isValid( cmd ) {
             
             try passToMCU( cmd )
@@ -92,12 +90,10 @@ class iOSListener: StreamClient {
             do {
             
                 try MCU.net().writeString( cmd );
-                
-                Session.shared.logger.addLine( "Command passed successfully." )
             
             } catch {
 
-                Session.shared.logger.addLine( "Sending passed failed." )
+                Session.shared.logger.addLine( "Passed to Arduino failed." )
                 Session.shared.logger.addError( error )
                 
                 try self.net().writeString( DefaultObjects.STATUS_ERROR )
