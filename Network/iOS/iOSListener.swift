@@ -28,7 +28,10 @@ class iOSListener: StreamClient {
     
     private func isValid( _ cmd: String! ) -> Bool! {
         
-        if cmd == DefaultObjects.CMD_LED_ON {
+        if cmd == DefaultObjects.CMD_NONE {
+            
+            return true
+        } else if cmd == DefaultObjects.CMD_LED_ON {
             
             return true
         } else if cmd == DefaultObjects.CMD_LED_OFF {

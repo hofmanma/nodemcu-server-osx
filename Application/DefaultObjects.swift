@@ -10,6 +10,7 @@ import Cocoa
 
 class DefaultObjects: NSObject {
 
+    static let CMD_NONE: String! = "NONE"
     static let CMD_LED_ON: String! = "LEDON"
     static let CMD_LED_OFF: String! = "LEDOFF"
     static let CMD_EXIT: String! = "EXIT"
