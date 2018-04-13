@@ -15,12 +15,12 @@ class ArduinoListener: StreamClient {
         Session.shared.logger.addLine( "New Command from Arduino Client: " + cmd )
         if cmd == DefaultObjects.CMD_PORTS {
             
-            for port in 0...8 {
+            for port in 0...7 {
                 
                 NodeMCU.IC.digitalPort( port ).setSignal( Float(connection.readInt()) )
             }
             
-            for port in 0...8 {
+            for port in 0...7 {
                 
                 NodeMCU.IC.analogPort( port ).setSignal( Float(connection.readInt()) )
             }
