@@ -87,6 +87,8 @@ class Session: NSObject {
         do {
             if let _ = self.user {
             
+                OutQueue.shared.stop()
+                
                 try self.user.sendCommand( "EXIT" )
             }
         } catch {

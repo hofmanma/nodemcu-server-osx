@@ -32,6 +32,8 @@
 		108A7198207CA885009617F7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108A7197207CA885009617F7 /* Logger.swift */; };
 		10C0F545207CC887008518D3 /* ArduinoListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0F544207CC887008518D3 /* ArduinoListener.swift */; };
 		10C0F54C207CDD94008518D3 /* iOSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0F54B207CDD94008518D3 /* iOSClient.swift */; };
+		10D4D7B52080FC2D00FE2B53 /* OutQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4D7B42080FC2D00FE2B53 /* OutQueue.swift */; };
+		10D4D7B72080FC7C00FE2B53 /* MCUCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4D7B62080FC7C00FE2B53 /* MCUCommand.swift */; };
 		410B2AB4DE485D74E8E12BF0 /* Pods_NodeMCUServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CB03CD527AF156A0DBF35 /* Pods_NodeMCUServer.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		108A7197207CA885009617F7 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		10C0F544207CC887008518D3 /* ArduinoListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArduinoListener.swift; sourceTree = "<group>"; };
 		10C0F54B207CDD94008518D3 /* iOSClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSClient.swift; sourceTree = "<group>"; };
+		10D4D7B42080FC2D00FE2B53 /* OutQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutQueue.swift; sourceTree = "<group>"; };
+		10D4D7B62080FC7C00FE2B53 /* MCUCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCUCommand.swift; sourceTree = "<group>"; };
 		5A11E16CB2D4D23E7008D012 /* Pods-NodeMCUServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodeMCUServer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NodeMCUServer/Pods-NodeMCUServer.release.xcconfig"; sourceTree = "<group>"; };
 		6D3A0EA29A959C9791BEF225 /* Pods-NodeMCUServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodeMCUServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NodeMCUServer/Pods-NodeMCUServer.debug.xcconfig"; sourceTree = "<group>"; };
 		B45CB03CD527AF156A0DBF35 /* Pods_NodeMCUServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NodeMCUServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +131,7 @@
 		107A37E3207B978B00492EE6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				10D4D7B32080FC0F00FE2B53 /* Queues */,
 				107A3804207BEF8100492EE6 /* Acceptor */,
 				10C0F548207CCC44008518D3 /* Library */,
 				10C0F547207CCC29008518D3 /* Arduino */,
@@ -195,6 +200,15 @@
 				1063912A207FF80700CB8F88 /* NodeMCUViewController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		10D4D7B32080FC0F00FE2B53 /* Queues */ = {
+			isa = PBXGroup;
+			children = (
+				10D4D7B42080FC2D00FE2B53 /* OutQueue.swift */,
+				10D4D7B62080FC7C00FE2B53 /* MCUCommand.swift */,
+			);
+			path = Queues;
 			sourceTree = "<group>";
 		};
 		7D09EF1FC1968BFD452CFAE0 /* Pods */ = {
@@ -341,10 +355,12 @@
 				107A37F5207BE1F300492EE6 /* ServerConnection.swift in Sources */,
 				10639129207FEDBA00CB8F88 /* Port.swift in Sources */,
 				107A37C4207B972C00492EE6 /* NodeMCUServer.xcdatamodeld in Sources */,
+				10D4D7B72080FC7C00FE2B53 /* MCUCommand.swift in Sources */,
 				107A37E9207B99A700492EE6 /* NetConnection.swift in Sources */,
 				107A37BF207B972C00492EE6 /* AppDelegate.swift in Sources */,
 				108A7194207C9ED4009617F7 /* DefaultObjects.swift in Sources */,
 				10C0F54C207CDD94008518D3 /* iOSClient.swift in Sources */,
+				10D4D7B52080FC2D00FE2B53 /* OutQueue.swift in Sources */,
 				107A37E5207B97C300492EE6 /* StreamServer.swift in Sources */,
 				107A37FF207BED8E00492EE6 /* ArduinoServer.swift in Sources */,
 				10639127207FEDAB00CB8F88 /* NodeMCU.swift in Sources */,

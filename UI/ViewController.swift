@@ -54,16 +54,7 @@ class ViewController: NSViewController {
     
     @IBAction func runCommand( sender: Any) {
         
-        do {
-        
-            try Session.shared.user.sendCommand( self.commandField.stringValue )
-        
-            Session.shared.logger.addLine( "Command sent successfully: " + self.commandField.stringValue )
-            
-        } catch {
-         
-             Session.shared.logger.addError( error )
-        }
+        OutQueue.shared.enqueue( self.commandField.stringValue )
         
         self.commandField.stringValue = ""
     }

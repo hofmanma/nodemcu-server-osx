@@ -10,14 +10,10 @@ import Cocoa
 
 class iOSClient: StreamClient {
 
-    override func handleCommand(  _ cmd: String! ) throws {
+    override func handleCommand( _ cmd: String! ) throws {
         
         Session.shared.logger.addLine( "New Command from iOS Client: " + cmd )
 
-        if cmd == DefaultObjects.STATUS_SUCCESS {
-                
-        } else if cmd == DefaultObjects.STATUS_ERROR {
-                
-        }
+        try super.handleCommand( cmd )
     }
 }

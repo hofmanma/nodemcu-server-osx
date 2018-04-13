@@ -32,6 +32,11 @@ class StreamClient: NSObject {
     
     func handleCommand( _ cmd: String! ) throws {
         
+        if cmd == DefaultObjects.STATUS_SUCCESS ||
+           cmd == DefaultObjects.STATUS_ERROR {
+           
+            OutQueue.shared.pop()
+        }
     }
     
     private func nextCommand() throws -> String? {
