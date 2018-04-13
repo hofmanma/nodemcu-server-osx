@@ -13,7 +13,6 @@ class Session: NSObject {
     static let shared: Session! = Session()
            var iOS: Acceptor!
            var MCU: Acceptor!
-           var arduino: ArduinoClient!
            var user: iOSClient!
            let logger: Logger! = Logger()
            var running: Bool!
@@ -34,10 +33,6 @@ class Session: NSObject {
             logger.addLine( "Arduino Acceptor started.")
             logger.addDashLine()
             
-            /*arduino = try ArduinoClient( ClientConnection( DefaultObjects.ARDUINO_PORT_IN,
-                                                           DefaultObjects.MY_IP ));
-            logger.addLine( "Arduino Test client started.")
-            */
             user = try iOSClient( ClientConnection( DefaultObjects.IOS_PORT_IN,
                                                     DefaultObjects.MY_IP ));
             logger.addLine( "iOS Test client started.")
@@ -71,14 +66,6 @@ class Session: NSObject {
                 })
                 
                 do {
-                
-                    // try self.arduino.run()
-                
-                } catch {
-                    
-                }
-                
-                do {
                     
                     try self.user.run()
                     
@@ -89,7 +76,6 @@ class Session: NSObject {
             
             self.iOS.stop()
             self.MCU.stop()
-            //self.arduino.net().close()
             self.user.net().close()
             
             self.logger.addLine( "Network shut down.")
