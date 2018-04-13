@@ -34,6 +34,7 @@
 		10C0F54C207CDD94008518D3 /* iOSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0F54B207CDD94008518D3 /* iOSClient.swift */; };
 		10D4D7B52080FC2D00FE2B53 /* OutQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4D7B42080FC2D00FE2B53 /* OutQueue.swift */; };
 		10D4D7B72080FC7C00FE2B53 /* MCUCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4D7B62080FC7C00FE2B53 /* MCUCommand.swift */; };
+		10D4D7B92081041E00FE2B53 /* PortReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4D7B82081041E00FE2B53 /* PortReader.swift */; };
 		410B2AB4DE485D74E8E12BF0 /* Pods_NodeMCUServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45CB03CD527AF156A0DBF35 /* Pods_NodeMCUServer.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		10C0F54B207CDD94008518D3 /* iOSClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSClient.swift; sourceTree = "<group>"; };
 		10D4D7B42080FC2D00FE2B53 /* OutQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutQueue.swift; sourceTree = "<group>"; };
 		10D4D7B62080FC7C00FE2B53 /* MCUCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCUCommand.swift; sourceTree = "<group>"; };
+		10D4D7B82081041E00FE2B53 /* PortReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortReader.swift; sourceTree = "<group>"; };
 		5A11E16CB2D4D23E7008D012 /* Pods-NodeMCUServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodeMCUServer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NodeMCUServer/Pods-NodeMCUServer.release.xcconfig"; sourceTree = "<group>"; };
 		6D3A0EA29A959C9791BEF225 /* Pods-NodeMCUServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NodeMCUServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NodeMCUServer/Pods-NodeMCUServer.debug.xcconfig"; sourceTree = "<group>"; };
 		B45CB03CD527AF156A0DBF35 /* Pods_NodeMCUServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NodeMCUServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +190,7 @@
 				108A7193207C9ED4009617F7 /* DefaultObjects.swift */,
 				108A7197207CA885009617F7 /* Logger.swift */,
 				108A7195207CA34F009617F7 /* Session.swift */,
+				10D4D7B82081041E00FE2B53 /* PortReader.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				10639129207FEDBA00CB8F88 /* Port.swift in Sources */,
 				107A37C4207B972C00492EE6 /* NodeMCUServer.xcdatamodeld in Sources */,
 				10D4D7B72080FC7C00FE2B53 /* MCUCommand.swift in Sources */,
+				10D4D7B92081041E00FE2B53 /* PortReader.swift in Sources */,
 				107A37E9207B99A700492EE6 /* NetConnection.swift in Sources */,
 				107A37BF207B972C00492EE6 /* AppDelegate.swift in Sources */,
 				108A7194207C9ED4009617F7 /* DefaultObjects.swift in Sources */,

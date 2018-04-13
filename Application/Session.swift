@@ -11,6 +11,7 @@ import Cocoa
 class Session: NSObject {
 
     static let shared: Session! = Session()
+           var reader: PortReader! = PortReader()
            var iOS: Acceptor!
            var MCU: Acceptor!
            var user: iOSClient!
@@ -40,6 +41,8 @@ class Session: NSObject {
             
             running = true
             run()
+            
+            reader.run()
         
         } catch {
             
@@ -84,11 +87,16 @@ class Session: NSObject {
     
     func shutDown() {
         
+        if let _ = reader {
+            
+            reader.stop()
+            reader = nil
+        }
+        
         do {
             if let _ = self.user {
             
                 OutQueue.shared.stop()
-                
                 try self.user.sendCommand( "EXIT" )
             }
         } catch {
