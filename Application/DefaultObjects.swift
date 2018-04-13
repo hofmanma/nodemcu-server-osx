@@ -15,11 +15,22 @@ class DefaultObjects: NSObject {
     static let CMD_EXIT: String! = "EXIT"
     static let CMD_READ_TEMPERATURE: String! = "TEMP"
     static let CMD_READ_HUMIDITY: String! = "HUMI"
+    
     static let CMD_READ_PORTS: String! = "PORTS"
     static let CMD_READ_DIGPORTS: String! = "DIGPORTS"
     static let CMD_READ_ANALOGPORTS: String! = "ALGPORTS"
     static let CMD_DIGITALPORT_SENT: String! = "DGTLPRT"
     static let CMD_ANALOGPORT_SENT: String! = "ANLGPRT"
+    
+    static let CMD_ANALOG_PORT_OUT: String! = "SETALGOUT"
+    static let CMD_ANALOG_PORT_IN: String! = "SETALGIN"
+    static let CMD_ANALOG_PORT_HIGH: String! = "SETALGHIGH"
+    static let CMD_ANALOG_PORT_LOW: String! = "SETALGLOW"
+    
+    static let CMD_DIGITAL_PORT_OUT: String! = "SETDIGIOUT"
+    static let CMD_DIGITAL_PORT_IN: String! = "SETDIGIIN"
+    static let CMD_DIGITAL_PORT_HIGH: String! = "SETDIGIHIGH"
+    static let CMD_DIGITAL_PORT_LOW: String! = "SETDIGILOW"
     
     static let STATUS_SUCCESS: String! = "Success"
     static let STATUS_ERROR: String! = "Error"

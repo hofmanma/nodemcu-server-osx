@@ -23,7 +23,7 @@ class Port: NSObject {
     
     func toString() -> String! {
         
-        return "\(id):\(value)"
+        return ioMode() + " \(value)"
     }
     
     func setSignal( _ value: Float! ) {
@@ -46,13 +46,13 @@ class Port: NSObject {
         switch self.mode{
         
         case Int(DefaultObjects.MODE_PORT_INPUT):
-            return "in"
+            return ">"
             
         case Int(DefaultObjects.MODE_PORT_OUTPUT):
-            return "out"
+            return "<"
         
         default:
-            return "unknown"
+            return "?"
         }
     }
 }

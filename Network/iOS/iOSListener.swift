@@ -14,35 +14,7 @@ class iOSListener: StreamClient {
         
         Session.shared.logger.addLine( "New Command from iOS Client: " + cmd )
         
-        if cmd == DefaultObjects.CMD_LED_ON {
-            
-            try passToMCU( cmd )
-            
-        } else if cmd == DefaultObjects.CMD_LED_OFF {
-            
-            try passToMCU( cmd )
-        
-        } else if cmd == DefaultObjects.CMD_EXIT {
-    
-            try passToMCU( cmd )
-            
-        } else if cmd == DefaultObjects.CMD_READ_TEMPERATURE {
-            
-            try passToMCU( cmd )
-        
-        } else if cmd == DefaultObjects.CMD_READ_HUMIDITY {
-            
-            try passToMCU( cmd )
-            
-        } else if cmd == DefaultObjects.CMD_READ_ANALOGPORTS {
-            
-            try passToMCU( cmd )
-            
-        } else if cmd == DefaultObjects.CMD_READ_DIGPORTS {
-            
-            try passToMCU( cmd )
-            
-        } else if cmd == DefaultObjects.CMD_READ_PORTS {
+        if isValid( cmd ) {
             
             try passToMCU( cmd )
             
@@ -51,6 +23,69 @@ class iOSListener: StreamClient {
             try self.net().writeString( DefaultObjects.STATUS_ERROR )
             
             Session.shared.logger.addLine( "Unknown Command in iOS Client." )
+        }
+    }
+    
+    private func isValid( _ cmd: String! ) -> Bool! {
+        
+        if cmd == DefaultObjects.CMD_LED_ON {
+            
+            return true
+        } else if cmd == DefaultObjects.CMD_LED_OFF {
+            
+            return true
+            
+        } else if cmd == DefaultObjects.CMD_EXIT {
+            
+            return true
+            
+        } else if cmd == DefaultObjects.CMD_READ_TEMPERATURE {
+            
+            return true
+            
+        } else if cmd == DefaultObjects.CMD_READ_HUMIDITY {
+            
+            return true
+            
+        } else if cmd == DefaultObjects.CMD_READ_ANALOGPORTS {
+            
+            return true
+            
+        } else if cmd == DefaultObjects.CMD_READ_DIGPORTS {
+            
+            return true
+            
+        } else if cmd == DefaultObjects.CMD_READ_PORTS {
+            
+            return true
+            
+        } else if cmd == DefaultObjects.CMD_ANALOG_PORT_OUT {
+        
+            return true
+        } else if cmd == DefaultObjects.CMD_ANALOG_PORT_IN {
+            
+            return true
+        } else if cmd == DefaultObjects.CMD_ANALOG_PORT_HIGH {
+            
+            return true
+        } else if cmd == DefaultObjects.CMD_ANALOG_PORT_LOW {
+            
+            return true
+        } else if cmd == DefaultObjects.CMD_DIGITAL_PORT_OUT {
+            
+            return true
+        } else if cmd == DefaultObjects.CMD_DIGITAL_PORT_IN {
+            
+            return true
+        } else if cmd == DefaultObjects.CMD_DIGITAL_PORT_HIGH {
+            
+            return true
+        } else if cmd == DefaultObjects.CMD_DIGITAL_PORT_LOW {
+            
+            return true
+        } else {
+            
+            return false
         }
     }
     
