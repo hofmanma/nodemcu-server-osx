@@ -29,4 +29,7 @@ class DefaultObjects: NSObject {
 
     static let MY_IP: String! = "192.168.2.103"
     static let COMMAND_HEADER: String! = "HEAD"
+
+    static let MODE_PORT_OUTPUT: Int32 = 1
+    static let MODE_PORT_INPUT: Int32 = 2
 }

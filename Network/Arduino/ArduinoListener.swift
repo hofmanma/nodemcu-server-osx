@@ -16,16 +16,16 @@ class ArduinoListener: StreamClient {
     
         if cmd == DefaultObjects.CMD_DIGITALPORT_SENT {
             
-            NodeMCU.IC.digitalPort( connection.readInt() ).setSignal( connection.readFloat() )
+            let port: Int! = connection.readInt()
+            let io: Int! = connection.readInt()
+            let signal: Float! = connection.readFloat()
+            
+            NodeMCU.IC.digitalPort( port ).setSignal( signal )
+            NodeMCU.IC.digitalPort( port ).setMode( io )
             
         } else if cmd == DefaultObjects.CMD_ANALOGPORT_SENT {
             
             NodeMCU.IC.analogPort( connection.readInt() ).setSignal( connection.readFloat() )
-            
-        } else if cmd == DefaultObjects.STATUS_SUCCESS {
-            
-        } else if cmd == DefaultObjects.STATUS_ERROR {
-            
         }
     }
 }

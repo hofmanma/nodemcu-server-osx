@@ -12,11 +12,13 @@ class Port: NSObject {
 
     let id: Int
     var value: Float
+    var mode: Int
     
     init( _ id: Int!, _ value: Float! ) {
     
         self.id = id
         self.value = value
+        self.mode = 1
     }
     
     func toString() -> String! {
@@ -28,9 +30,29 @@ class Port: NSObject {
         
         self.value = value
     }
-    
+
+    func setMode( _ value: Int! ) {
+        
+        self.mode = value
+    }
+
     func signal() -> Float! {
         
         return self.value
+    }
+    
+    func ioMode() -> String! {
+        
+        switch self.mode{
+        
+        case Int(DefaultObjects.MODE_PORT_INPUT):
+            return "in"
+            
+        case Int(DefaultObjects.MODE_PORT_OUTPUT):
+            return "out"
+        
+        default:
+            return "unknown"
+        }
     }
 }
