@@ -15,7 +15,6 @@ class PortReader: NSObject {
     override init() {
         
         super.init()
-        run()
     }
     
     func run() {
@@ -29,9 +28,10 @@ class PortReader: NSObject {
                 if Session.shared.MCU.hasClients() {
                 
                     OutQueue.shared.enqueue( DefaultObjects.CMD_PORTS )
-                
-                    sleep(5000)
+
                 }
+            
+                usleep(7000000)
             }
         }
     }

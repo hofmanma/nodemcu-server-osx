@@ -10,8 +10,7 @@ import Cocoa
 
 class MCUCommand: NSObject {
 
-           let cmd: String
-    static let lock: NSLock! = NSLock()
+    let cmd: String
     
     init( _ cmd: String! ) {
         
@@ -23,20 +22,8 @@ class MCUCommand: NSObject {
         return cmd
     }
     
-    func send() {
+    func send() throws {
         
-        MCUCommand.lock.lock()
-        do {
-            
-            try Session.shared.user.sendCommand( cmd )
-        } catch {
-            
-            MCUCommand.lock.unlock()
-        }
-    }
-    
-    func isLocked() -> Bool! {
-        
-        return MCUCommand.lock.try()
+        try Session.shared.user.sendCommand( cmd )
     }
 }

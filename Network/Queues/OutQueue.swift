@@ -11,6 +11,8 @@ import Cocoa
 class OutQueue: NSObject {
     
     static let shared: OutQueue! = OutQueue()
+    
+           let lock: NSLock! = NSLock()
            var responses: [MCUCommand]!
            var running: Bool!
     
@@ -39,34 +41,12 @@ class OutQueue: NSObject {
     }
     
     func pop() {
+
+        unlock()
         
         if responses.count > 0 {
-            
-            MCUCommand.lock.unlock()
-            
+
             responses.remove(at: 0)
-        } else {
-            
-            MCUCommand.lock.unlock()
-        }
-    }
-    
-    func top() -> MCUCommand? {
-        
-        if responses.count > 0 {
-            
-            let item: MCUCommand! = responses[ 0 ]
-            if item.isLocked() {
-                
-                return nil
-            } else {
-                
-                return item
-            }
-        
-        } else {
-            
-            return nil
         }
     }
     
@@ -76,13 +56,44 @@ class OutQueue: NSObject {
         
             while self.running == true {
             
-                if let cmd = self.top() {
+                if let cmd = self.next() {
                 
-                    cmd.send()
+                    do {
+                    
+                        try cmd.send()
+                    } catch {
+                        
+                        self.unlock()
+                    }
                 }
+                
+                usleep( 14000000 )
             }
             
-            MCUCommand.lock.unlock();
+            self.unlock()
         }
+    }
+    
+    private func next() -> MCUCommand? {
+        
+        if lock.try() == false {
+            
+            return nil
+        }
+        
+        if responses.count > 0 {
+            
+            return responses[ 0 ]
+        } else {
+            
+            unlock()
+            
+            return nil
+        }
+    }
+    
+    private func unlock() {
+        
+        lock.unlock()
     }
 }
