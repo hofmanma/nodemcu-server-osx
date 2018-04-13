@@ -17,11 +17,12 @@ class DefaultObjects: NSObject {
     static let CMD_READ_TEMPERATURE: String! = "TEMP"
     static let CMD_READ_HUMIDITY: String! = "HUMI"
     
-    static let CMD_READ_PORTS: String! = "PORTS"
-    static let CMD_READ_DIGPORTS: String! = "DIGPORTS"
-    static let CMD_READ_ANALOGPORTS: String! = "ALGPORTS"
+    static let CMD_PORTS: String! = "PORTS"
     static let CMD_DIGITALPORT_SENT: String! = "DGTLPRT"
     static let CMD_ANALOGPORT_SENT: String! = "ANLGPRT"
+    
+    static let CMD_DIGITAL_PORTS: String! = "DIGIPORTS"
+    static let CMD_ANALOG_PORTS: String! = "ALGPORTS"
     
     static let CMD_ANALOG_PORT_OUT: String! = "SETALGOUT"
     static let CMD_ANALOG_PORT_IN: String! = "SETALGIN"

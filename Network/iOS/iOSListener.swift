@@ -37,31 +37,24 @@ class iOSListener: StreamClient {
         } else if cmd == DefaultObjects.CMD_LED_OFF {
             
             return true
-            
         } else if cmd == DefaultObjects.CMD_EXIT {
             
             return true
-            
         } else if cmd == DefaultObjects.CMD_READ_TEMPERATURE {
             
             return true
-            
         } else if cmd == DefaultObjects.CMD_READ_HUMIDITY {
             
             return true
-            
-        } else if cmd == DefaultObjects.CMD_READ_ANALOGPORTS {
-            
-            return true
-            
-        } else if cmd == DefaultObjects.CMD_READ_DIGPORTS {
+        } else if cmd == DefaultObjects.CMD_ANALOG_PORTS {
             
             return true
-            
-        } else if cmd == DefaultObjects.CMD_READ_PORTS {
+        } else if cmd == DefaultObjects.CMD_DIGITAL_PORTS {
             
             return true
+        } else if cmd == DefaultObjects.CMD_PORTS {
             
+            return true
         } else if cmd == DefaultObjects.CMD_ANALOG_PORT_OUT {
         
             return true

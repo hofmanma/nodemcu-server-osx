@@ -85,9 +85,10 @@ class Session: NSObject {
     func shutDown() {
         
         do {
-        
-            try self.user.sendCommand( "EXIT" )
-        
+            if let _ = self.user {
+            
+                try self.user.sendCommand( "EXIT" )
+            }
         } catch {
             
         }
