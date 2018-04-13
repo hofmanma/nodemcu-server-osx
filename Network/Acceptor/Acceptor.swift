@@ -57,6 +57,11 @@ class Acceptor: NSObject {
         self.clients.removeAll()
     }
     
+    func hasClients() -> Bool! {
+        
+        return clients.count > 0
+    }
+    
     func isRunning() -> Bool! {
         
         return running
