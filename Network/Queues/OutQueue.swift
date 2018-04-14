@@ -13,14 +13,17 @@ class OutQueue: NSObject {
     static let shared: OutQueue! = OutQueue()
     
            let lock: NSLock! = NSLock()
-           var responses: [MCUCommand]!
+           var system: [MCUCommand]!
+           var user: [MCUCommand]!
            var running: Bool!
     
     override init() {
         
         super.init()
         
-        responses = [MCUCommand]()
+        system = [MCUCommand]()
+        user = [MCUCommand]()
+
         start()
     }
     
@@ -35,18 +38,29 @@ class OutQueue: NSObject {
         running = false
     }
     
-    func enqueue( _ cmd: String! ) {
+    func enqueueUser( _ cmd: String! ) {
         
-        responses.append( MCUCommand( cmd ))
+        user.append( MCUCommand( cmd ))
+    }
+    
+    func enqueueSystem( _ cmd: String! ) {
+        
+        if system.count < 2 {
+
+            system.append( MCUCommand( cmd ) )
+        }
     }
     
     func pop() {
 
         unlock()
         
-        if responses.count > 0 {
+        if user.count > 0 {
+            
+            user.remove(at: 0)
+        } else if system.count > 0 {
 
-            responses.remove(at: 0)
+            system.remove(at: 0)
         }
     }
     
@@ -66,8 +80,6 @@ class OutQueue: NSObject {
                         self.unlock()
                     }
                 }
-                
-                usleep( 14000000 )
             }
             
             self.unlock()
@@ -81,9 +93,12 @@ class OutQueue: NSObject {
             return nil
         }
         
-        if responses.count > 0 {
+        if user.count > 0 {
             
-            return responses[ 0 ]
+            return user[ 0 ]
+        } else if system.count > 0 {
+            
+            return system[ 0 ]
         } else {
             
             unlock()

@@ -54,7 +54,7 @@ class ViewController: NSViewController {
     
     @IBAction func runCommand( sender: Any) {
         
-        OutQueue.shared.enqueue( self.commandField.stringValue )
+        OutQueue.shared.enqueueUser( self.commandField.stringValue )
         
         self.commandField.stringValue = ""
     }
