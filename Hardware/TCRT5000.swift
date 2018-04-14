@@ -15,6 +15,8 @@ class TCRT5000: NSObject {
     func setSignal( _ signal: Float! ) {
         
         self.signal = signal
+        
+        Session.shared.logger.addLine( "TCRT5000: \(self.signal!)" );
     }
     
     func touched() -> Bool! {
