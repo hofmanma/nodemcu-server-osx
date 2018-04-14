@@ -45,7 +45,7 @@ class OutQueue: NSObject {
     
     func enqueueSystem( _ cmd: String! ) {
         
-        if system.count < 1 {
+        if system.count < 2 {
 
             system.append( MCUCommand( cmd ) )
         }
