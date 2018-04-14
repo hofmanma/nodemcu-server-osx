@@ -21,6 +21,6 @@ class TCRT5000: NSObject {
     
     func touched() -> Bool! {
         
-        return signal > 50.0
+        return signal > 750.0
     }
 }

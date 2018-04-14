@@ -28,6 +28,7 @@ class PortReader: NSObject {
                 if Session.shared.MCU.hasClients() {
                 
                     OutQueue.shared.enqueueSystem( DefaultObjects.CMD_PORTS )
+                    OutQueue.shared.enqueueSystem( DefaultObjects.CMD_TRACKING )
                 
                     usleep( 6000000 )
                 } else {
