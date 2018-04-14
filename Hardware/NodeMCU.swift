@@ -11,6 +11,7 @@ import Cocoa
 class NodeMCU: NSObject {
 
     static let IC: NodeMCU! = NodeMCU()
+           let tcrt: TCRT5000! = TCRT5000()
     
     var digitalPorts: [Port]!
     var analogPorts: [Port]!

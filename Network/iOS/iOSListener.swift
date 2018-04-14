@@ -77,6 +77,9 @@ class iOSListener: StreamClient {
         } else if cmd == DefaultObjects.CMD_DIGITAL_PORT_LOW {
             
             return true
+        } else if cmd == DefaultObjects.CMD_TRACKING {
+    
+            return true
         } else {
             
             return false

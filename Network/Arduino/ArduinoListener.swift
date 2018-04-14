@@ -24,6 +24,10 @@ class ArduinoListener: StreamClient {
                 NodeMCU.IC.analogPort( port ).setSignal( Float(connection.readInt()) )
             }
             
+        } else if cmd == DefaultObjects.CMD_TRACKING {
+            
+            NodeMCU.IC.tcrt.setSignal( connection.readFloat() )
+            
         } else if cmd == DefaultObjects.CMD_DIGITALPORT_SENT {
             
             let port: Int! = connection.readInt()

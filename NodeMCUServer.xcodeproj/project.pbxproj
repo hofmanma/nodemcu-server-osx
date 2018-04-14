@@ -32,6 +32,7 @@
 		108A7198207CA885009617F7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108A7197207CA885009617F7 /* Logger.swift */; };
 		10C0F545207CC887008518D3 /* ArduinoListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0F544207CC887008518D3 /* ArduinoListener.swift */; };
 		10C0F54C207CDD94008518D3 /* iOSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0F54B207CDD94008518D3 /* iOSClient.swift */; };
+		10C6F0EA20829C7D00B7130E /* TCRT5000.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6F0E920829C7D00B7130E /* TCRT5000.swift */; };
 		10D4D7B52080FC2D00FE2B53 /* OutQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4D7B42080FC2D00FE2B53 /* OutQueue.swift */; };
 		10D4D7B72080FC7C00FE2B53 /* MCUCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4D7B62080FC7C00FE2B53 /* MCUCommand.swift */; };
 		10D4D7B92081041E00FE2B53 /* PortReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D4D7B82081041E00FE2B53 /* PortReader.swift */; };
@@ -67,6 +68,7 @@
 		108A7197207CA885009617F7 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		10C0F544207CC887008518D3 /* ArduinoListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArduinoListener.swift; sourceTree = "<group>"; };
 		10C0F54B207CDD94008518D3 /* iOSClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSClient.swift; sourceTree = "<group>"; };
+		10C6F0E920829C7D00B7130E /* TCRT5000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCRT5000.swift; sourceTree = "<group>"; };
 		10D4D7B42080FC2D00FE2B53 /* OutQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutQueue.swift; sourceTree = "<group>"; };
 		10D4D7B62080FC7C00FE2B53 /* MCUCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCUCommand.swift; sourceTree = "<group>"; };
 		10D4D7B82081041E00FE2B53 /* PortReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortReader.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				10639126207FEDAB00CB8F88 /* NodeMCU.swift */,
 				10639128207FEDBA00CB8F88 /* Port.swift */,
+				10C6F0E920829C7D00B7130E /* TCRT5000.swift */,
 			);
 			path = Hardware;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				107A37FF207BED8E00492EE6 /* ArduinoServer.swift in Sources */,
 				10639127207FEDAB00CB8F88 /* NodeMCU.swift in Sources */,
 				10C0F545207CC887008518D3 /* ArduinoListener.swift in Sources */,
+				10C6F0EA20829C7D00B7130E /* TCRT5000.swift in Sources */,
 				107A37FB207BE3F300492EE6 /* iOSServer.swift in Sources */,
 				1063912B207FF80700CB8F88 /* NodeMCUViewController.swift in Sources */,
 				107A37F9207BE29C00492EE6 /* iOSListener.swift in Sources */,

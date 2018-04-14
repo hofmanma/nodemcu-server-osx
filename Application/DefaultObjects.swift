@@ -13,7 +13,9 @@ class DefaultObjects: NSObject {
     static let CMD_NONE: String! = "NONE"
     static let CMD_LED_ON: String! = "LEDON"
     static let CMD_LED_OFF: String! = "LEDOFF"
+    
     static let CMD_EXIT: String! = "EXIT"
+    
     static let CMD_READ_TEMPERATURE: String! = "TEMP"
     static let CMD_READ_HUMIDITY: String! = "HUMI"
     
@@ -33,6 +35,8 @@ class DefaultObjects: NSObject {
     static let CMD_DIGITAL_PORT_IN: String! = "SETDIGIIN"
     static let CMD_DIGITAL_PORT_HIGH: String! = "SETDIGIHIGH"
     static let CMD_DIGITAL_PORT_LOW: String! = "SETDIGILOW"
+    
+    static let CMD_TRACKING: String! = "TCRT"
     
     static let STATUS_SUCCESS: String! = "Success"
     static let STATUS_ERROR: String! = "Error"
