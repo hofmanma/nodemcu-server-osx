@@ -31,7 +31,7 @@ class PortReader: NSObject {
                     OutQueue.shared.enqueueSystem( DefaultObjects.CMD_PORTS )
                     ///////////////////////////////
                     // Implement a small delay to
-                    // keep MCU from overfitting
+                    // keep MCU from overfeeding
                     usleep( 250000 )
                 }
             }
