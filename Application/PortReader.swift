@@ -30,7 +30,7 @@ class PortReader: NSObject {
                     OutQueue.shared.enqueueSystem( DefaultObjects.CMD_PORTS )
                     OutQueue.shared.enqueueSystem( DefaultObjects.CMD_TRACKING )
                 
-                    usleep( 6000000 )
+                    usleep( 3000000 )
                 } else {
                     
                     usleep( 5000 )
