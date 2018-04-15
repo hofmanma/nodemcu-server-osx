@@ -1117,6 +1117,15 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RL1-Y4-nqh">
+                                <rect key="frame" x="194" y="138" width="68" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="6K4-gi-nvD">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -1156,6 +1165,7 @@
                         <outlet property="lblD6" destination="i60-Fs-7HN" id="T71-Cm-9nP"/>
                         <outlet property="lblD7" destination="fVU-hA-0xF" id="MD4-j8-J4O"/>
                         <outlet property="lblD8" destination="MV9-iS-vRE" id="U1B-ke-eZg"/>
+                        <outlet property="lblTouched" destination="RL1-Y4-nqh" id="jfy-JQ-kAS"/>
                     </connections>
                 </viewController>
                 <customObject id="aTN-31-aZ2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

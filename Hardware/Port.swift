@@ -23,7 +23,7 @@ class Port: NSObject {
     
     func toString() -> String! {
         
-        return ioMode() + " \(value)"
+        return ioMode() + " \(Int(value))"
     }
     
     func setSignal( _ value: Float! ) {

@@ -50,6 +50,8 @@ class NodeMCUViewController: NSViewController {
     @IBOutlet weak var lblA7: NSTextField!
     @IBOutlet weak var lblA8: NSTextField!
     
+    @IBOutlet weak var lblTouched: NSTextField!
+    
     var timer: Timer!
     
     override func viewDidLoad() {
@@ -112,5 +114,13 @@ class NodeMCUViewController: NSViewController {
         lblA6.stringValue = NodeMCU.IC.analogPort( 6 ).toString()
         lblA7.stringValue = NodeMCU.IC.analogPort( 7 ).toString()
         lblA8.stringValue = NodeMCU.IC.analogPort( 8 ).toString()
+        
+        if NodeMCU.IC.tcrt.touched() {
+            
+            lblTouched.stringValue = "touched"
+        } else {
+            
+            lblTouched.stringValue = "-"
+        }
     }
 }
