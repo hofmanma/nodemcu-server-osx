@@ -106,17 +106,34 @@ class OutQueue: NSObject {
             return nil
         }
         
-        if user.count > 0 {
+        for result in user {
             
-            return user[ 0 ]
-        } else if system.count > 0 {
-            
-            return system[ 0 ]
-        } else {
-            
-            unlock()
-            return nil
+            if result.sent() {
+                
+                user.remove(at: user.index( of: result )!)
+            } else {
+                
+                return result
+            }
         }
+       
+        siso.lock()
+        for result in system {
+            
+            if result.sent() {
+                
+                system.remove(at: system.index( of: result )!)
+            } else {
+                
+                siso.unlock()
+                return result
+            }
+        }
+        
+            siso.unlock()
+        unlock()
+        
+        return nil
     }
     
     private func unlock() {
