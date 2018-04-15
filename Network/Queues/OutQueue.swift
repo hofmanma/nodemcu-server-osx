@@ -56,15 +56,23 @@ class OutQueue: NSObject {
     
     func pop() {
         
-        if user.count > 0 {
-            
-            user.remove(at: 0)
-        } else if system.count > 0 {
-
-            siso.lock()
-                system.remove(at: 0)
-            siso.unlock()
+        for result in user {
+        
+            if result.sent() {
+                
+                user.remove(at: user.index( of: result )!)
+            }
         }
+        
+        siso.lock()
+        for result in system {
+            
+            if result.sent() {
+                
+                system.remove(at: system.index( of: result )!)
+            }
+        }
+        siso.unlock()
         
         unlock()
     }

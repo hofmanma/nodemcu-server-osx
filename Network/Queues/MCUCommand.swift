@@ -11,10 +11,12 @@ import Cocoa
 class MCUCommand: NSObject {
 
     let cmd: String
+    var status: Bool
     
     init( _ cmd: String! ) {
         
         self.cmd = cmd
+        self.status = false
     }
     
     func command() -> String! {
@@ -25,5 +27,11 @@ class MCUCommand: NSObject {
     func send() throws {
         
         try Session.shared.user.sendCommand( cmd )
+            status = true
+    }
+    
+    func sent() -> Bool! {
+        
+        return status
     }
 }
