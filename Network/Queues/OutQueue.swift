@@ -13,6 +13,7 @@ class OutQueue: NSObject {
     static let shared: OutQueue! = OutQueue()
     
            let lock: NSLock! = NSLock()
+           let siso: NSLock! = NSLock()
            var system: [MCUCommand]!
            var user: [MCUCommand]!
            var running: Bool!
@@ -44,24 +45,28 @@ class OutQueue: NSObject {
     }
     
     func enqueueSystem( _ cmd: String! ) {
-        
-        if system.count < 3 {
+
+        siso.lock()
+        if system.count < 2 {
 
             system.append( MCUCommand( cmd ) )
         }
+        siso.unlock()
     }
     
     func pop() {
-
-        unlock()
         
         if user.count > 0 {
             
             user.remove(at: 0)
         } else if system.count > 0 {
 
-            system.remove(at: 0)
+            siso.lock()
+                system.remove(at: 0)
+            siso.unlock()
         }
+        
+        unlock()
     }
     
     func run() {
@@ -102,7 +107,6 @@ class OutQueue: NSObject {
         } else {
             
             unlock()
-            
             return nil
         }
     }
